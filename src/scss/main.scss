@@ -15,20 +15,118 @@ video {
 
 @import "bootstrap/scss/bootstrap-grid";
 
-.row + .row {
-  margin-top: 16px;
+// .row + .row {
+//   margin-top: 16px;
+// }
+
+// .row > .col,
+// .row > [class^="col-"] {
+//   padding-top: 12px;
+//   padding-bottom: 12px;
+//   background-color: rgba(86, 61, 124, 0.15);
+//   border: 1px solid rgba(86, 61, 124, 0.2);
+// }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0%;
+  font-weight: 0;
+  color: #000;
 }
 
-.row > .col,
-.row > [class^="col-"] {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  background-color: rgba(86, 61, 124, 0.15);
-  border: 1px solid rgba(86, 61, 124, 0.2);
+h3 {
+  font-family: Times;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+h4 {
+  font-family: "Helvetica Neue";
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.awesome {
+  color: #000;
+  font-family: "Font Awesome 6 Free";
+  font-size: 9px;
+  font-weight: 900;
+}
+
+.awesome-header {
+  font-size: 20px;
+}
+
+.body {
+  background-image: url("../img/pattern.jpg");
+  background-repeat: repeat;
+  opacity: 15%;
 }
 
 .header {
   background-color: aquamarine;
+}
+
+.header-all img {
+  width: 134px;
+  height: 76px;
+}
+
+.header-all {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-goupe {
+  display: flex;
+  align-items: center;
+  gap: 149px;
+}
+
+.header-langue {
+  display: flex;
+  align-items: center;
+  gap: 72px;
+}
+
+.header-text {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.header-titre {
+  display: flex;
+  align-items: center;
+  gap: 29px;
+}
+
+.header-soustitre {
+  display: flex;
+  justify-content: center;
+  gap: 29px;
+}
+
+.langue {
+  display: flex;
+  height: 33px;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+}
+
+.header-icone {
+  display: flex;
+  width: 70px;
+  align-items: center;
+  gap: 27px;
 }
 
 .footer {
