@@ -1,56 +1,13 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <title>Vin Nature Suisse</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="scss/main.scss" />
-  </head>
-  <body>
-    <div class="header">
-      <div class="container">
-        <div class="row">
-          <div class="col">
-            <div class="header-all">
-              <img src="./img/logo.png" alt="logo" />
-              <div class="header-groupe">
-                <div class="header-langue">
-                  <div class="header-text">
-                    <div class="header-titre">
-                      <h3>La Cave</h3>
-                      <h3>Nos Vins</h3>
-                      <h3>Philosophie</h3>
-                      <h3>Actualités</h3>
-                    </div>
-                    <div class="header-soustitre">
-                      <h4>Vente en ligne</h4>
-                      <h4>Visités/Évenements</h4>
-                      <h4>Contact</h4>
-                    </div>
-                  </div>
-                  <div class="langue">
-                    <h4>FR</h4>
-                    <h4 class="awesome">chevron-down</h4>
-                  </div>
-                </div>
-                <div class="header-icone">
-                  <h4 class="awesome awesome-header">cart-shopping</h4>
-                  <h4 class="awesome awesome-header">profile</h4>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+<extends src="base-layout.html">
+  <block name="content">
     <div class="container">
       <div class="row">
         <div class="col">
           <div class="actualite">
-            <img src="./img/accueil.png" alt="accueil" />
-            <div class="bouton">
+            <img class="papy" src="./img/accueil.png" alt="accueil" />
+            <div class="bouton bouton-act">
               <p>Découvrez tous nos vins</p>
-              <p class="awesome">vin-bottle</p>
+              <i class="fa-solid fa-wine-bottle"></i>
             </div>
           </div>
         </div>
@@ -61,38 +18,46 @@
       <div class="row">
         <div class="col-6">
           <div class="text-promotion">
-            <p class="text-info">
-              Le Musée de Saint-Pierre expose une des œuvres de Sebastien
-              Glisch, en partenariat avec La Cave, qui propose également une
-              promotion exclusive sur ce vin.
-            </p>
-            <p class="valable">Valable jusqu’au 27 Mars 2024</p>
-            <div class="bouton">En savoir plus</div>
+            <div class="text-entier-pourcent">
+              <p class="text-info">
+                Le Musée de Saint-Pierre expose une des œuvres de Sebastien
+                Glisch, en partenariat avec La Cave, qui propose également une
+                promotion exclusive sur ce vin.
+              </p>
+              <p class="valable">Valable jusqu’au 27 Mars 2024</p>
+              <div class="bouton bouton-pourcent">En savoir plus</div>
+            </div>
           </div>
         </div>
         <div class="col-5 offset-1">
-          <img src="./img/vin-promotion1.png" alt="vin-oiseau" />
-          <div class="pourcent">
-            <p>- 20%</p>
-          </div>
+          <img
+            class="vin-pourcentage"
+            src="./img/vin-promotion1.png"
+            alt="vin-oiseau"
+          />
+          <div class="pourcent">- 20%</div>
         </div>
       </div>
       <div class="row">
         <div class="col-5">
-          <img src="./img/vin-promotion2.png" alt="vin-fourmi" />
-          <div class="pourcent">
-            <p>- 10%</p>
-          </div>
+          <img
+            class="vin-pourcentage"
+            src="./img/vin-promotion2.png"
+            alt="vin-fourmi"
+          />
+          <div class="pourcent">- 10%</div>
         </div>
         <div class="col-6 offset-1">
           <div class="text-promotion">
-            <p class="text-info">
-              Une des œuvres de Rachel Rampfter est actuellement exposée au
-              Musée de Saint-Pierre. Grâce à sa collaboration avec La Cave, une
-              promotion sur ce vin en édition limitée a été mise en place.
-            </p>
-            <p class="valable">Valable seulement 14 décembre 2024</p>
-            <div class="bouton">En savoir plus</div>
+            <div class="text-entier-pourcent">
+              <p class="text-info">
+                Une des œuvres de Rachel Rampfter est actuellement exposée au
+                Musée de Saint-Pierre. Grâce à sa collaboration avec La Cave,
+                une promotion sur ce vin en édition limitée a été mise en place.
+              </p>
+              <p class="valable">Valable seulement 14 décembre 2024</p>
+              <div class="bouton">En savoir plus</div>
+            </div>
           </div>
         </div>
       </div>
@@ -256,7 +221,5 @@
         </div>
       </div>
     </div>
-
-    <script src="js/main.js" type="module"></script>
-  </body>
-</html>
+  </block>
+</extends>
