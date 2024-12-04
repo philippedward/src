@@ -355,8 +355,15 @@ h1 {
   justify-content: center;
 }
 
+.vedette-center:hover {
+  transform: rotate(2.319deg);
+}
+
 .vedette {
   position: relative;
+  display: inline-block;
+  z-index: 1; 
+  transition: transform 0.3s ease; 
 }
 
 .cadre {
@@ -370,6 +377,48 @@ h1 {
   left: 50%;
   transform: translate(-50.5%, -50%);
   box-shadow: 20px 20px 9.5px 0px rgba(0, 0, 0, 0.1);
+}
+
+.vedette::before,
+.vedette::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  background-color: rgba(255, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  z-index: -1;
+}
+
+/* Premier orbe */
+.vedette::before {
+  width: 120px;
+  height: 120px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 0.6;
+}
+
+/* Deuxième orbe */
+.vedette::after {
+  width: 250px;
+  height: 250px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 0.4;
+}
+
+.vedette:hover::before {
+  width: 480px;
+  height: 480px;
+  opacity: 0.8;
+}
+
+.vedette:hover::after {
+  width: 720px;
+  height: 720px;
+  opacity: 0.2;
 }
 
 // *** carrousel *** //
@@ -394,7 +443,7 @@ h3 {
 
 .carousel-container {
   overflow: hidden;
-  margin-top: 118px;
+  margin-top: 150px;
 }
 
 .row.nowrap {
@@ -412,6 +461,16 @@ h3 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  transition: transform 0.3s ease;
+}
+
+/* Effet de survol */
+.carousel-image:hover .flou {
+  filter: blur(2px);
+}
+
+.carousel-image:hover .categorie {
+  transform: translate(-50%, -50%) scale(1.1);
 }
 
 //*** footer ***//
