@@ -164,6 +164,41 @@ body {
   transform: rotate(-43.754deg);
 }
 
+//*** scroll text ***//
+
+.scroll-text {
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.scroll-text-content {
+  display: flex;
+  animation: scroll 10s linear infinite;
+  margin-top: 112px;
+}
+
+h1 {
+  color: #000;
+  text-align: center;
+  font-family: Times;
+  font-size: 66px;
+  font-style: italic;
+  font-weight: 400;
+  margin: 0;
+  padding: 0 20px;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
 //*** promotions ***//
 
 .text-entier-pourcent {
@@ -264,6 +299,39 @@ body {
   left: 50%;
   transform: translate(-50.5%, -50%);
   box-shadow: 20px 20px 9.5px 0px rgba(0, 0, 0, 0.1);
+}
+
+// *** carousel ** //
+
+h2 {
+  color: #fff;
+  font-family: Times;
+  font-size: 38px;
+  font-style: italic;
+  font-weight: 700;
+}
+
+h3 {
+  color: #fff;
+  font-family: "Helvetica Neue";
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.categorie {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.carousel-image {
+  position: relative;
 }
 
 //*** footer ***//
