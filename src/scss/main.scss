@@ -142,7 +142,6 @@ header {
 }
 
 .carousel-img {
-  width: 100%;
   display: flex;
   transition: transform 0.5s ease-in-out;
 }
@@ -157,8 +156,7 @@ header {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: #e93939;
-  color: white;
+  color: #e93939;
   border: none;
   font-size: 24px;
   padding: 10px;
@@ -362,8 +360,8 @@ h1 {
 .vedette {
   position: relative;
   display: inline-block;
-  z-index: 1; 
-  transition: transform 0.3s ease; 
+  z-index: 1;
+  transition: transform 0.3s ease;
 }
 
 .cadre {
@@ -421,9 +419,24 @@ h1 {
   opacity: 0.2;
 }
 
+.overlay {
+  position: absolute;
+  bottom: 230px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: bottom 0.3s ease;
+  opacity: 0;
+  z-index: 2;
+}
+
+.vedette:hover ~ .overlay {
+  opacity: 1;
+}
+
 // *** carrousel *** //
 
-h2 {
+h2,
+span {
   color: #fff;
   font-family: Times;
   font-size: 38px;
@@ -550,4 +563,163 @@ footer {
   font-family: "Font Awesome 6 Free";
   font-size: 32px;
   font-weight: 900;
+}
+
+// *** vin *** //
+
+.vin-nom,
+.vin-date,
+.vin-cl,
+.vin-prix {
+  color: #000;
+  font-family: Times;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.vin-long-text p {
+  color: #000;
+  font-family: "Helvetica Neue";
+  font-size: 20px;
+  font-weight: 200;
+}
+
+.bouton-chiffre p {
+  color: #e93939;
+  font-family: "Helvetica Neue";
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.bouton-chiffre {
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #e93939;
+  background: #fff;
+}
+
+.bouton-fleche-up p,
+.bouton-fleche-down p {
+  color: #fff;
+  font-family: "Font Awesome 6 Free";
+  font-size: 16px;
+  font-weight: 900;
+}
+
+.bouton-fleche-up,
+.bouton-fleche-down {
+  display: flex;
+  padding: 4px 30px;
+  align-items: center;
+  align-self: stretch;
+  background: #e93939;
+}
+
+.bouton-fleche {
+  display: flex;
+  width: 71px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1px;
+  background: #fff;
+}
+
+.bouton-ajouter {
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+}
+.page-entier {
+  display: inline-flex;
+  align-items: flex-start;
+}
+
+.page-vin {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 66px;
+}
+
+.vin-mini {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  align-items: flex-end;
+}
+
+.vin-long-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 47px;
+  align-self: stretch;
+}
+
+// *** details *** //
+
+.oeuvre-all h2,
+.avis h2,
+.love-all h2 {
+  color: #000;
+  font-family: Times;
+  font-size: 28px;
+  font-weight: 400;
+}
+
+.sous-all h3 {
+  color: #000;
+  font-family: "Helvetica Neue";
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.sous-all p {
+  color: #000;
+  text-align: right;
+  font-family: "Helvetica Neue";
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.sous-all {
+  display: flex;
+}
+
+.sous-titre {
+  display: flex;
+}
+
+.sous-titre p {
+  align-items: flex-end;
+}
+
+.oeuvre-all {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+// *** avis *** //
+
+.avis {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.etoile {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.avis-all {
+  display: flex;
+  width: 1114px;
+  justify-content: space-between;
+  align-items: flex-start;
 }
