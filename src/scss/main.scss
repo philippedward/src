@@ -141,10 +141,9 @@ header {
 .menu-header {
   display: flex;
   align-items: center;
-  gap: 10px;
 }
 
-.menu-header i {
+.awesome-arrow.clicked {
   transform: rotate(180deg);
   transition: transform 0.5s ease; /* Transition pour la rotation */
 }
@@ -155,22 +154,25 @@ nav {
   align-items: center;
 }
 
-nav a, .menu-header i {
+nav a,
+.menu-header i {
   color: #000;
   text-decoration: none;
   display: block;
   text-align: center;
+  padding: 0px 8px;
 }
 
-nav a:hover {
+.hidden:hover {
   background: #f4f4f4;
+  padding: 0px 8px;
 }
 
 /* Cacher les autres liens au départ */
 .hidden-links {
   overflow: hidden;
   max-height: 0;
-  transition: max-height 0.7s ease-in-out;
+  transition: max-height 0.5s ease-in-out;
 }
 
 /* Liens supplémentaires visibles lorsqu'activé */
@@ -181,7 +183,6 @@ nav a:hover {
 .rotated {
   transform: rotate(180deg); /* Rotation de l'icône */
 }
-
 
 //*** accueil ***//
 
@@ -247,14 +248,13 @@ button {
   gap: 10px;
   background: #e93939;
   cursor: pointer;
-  transition: background-color 0.7s ease, color 0.7s ease; 
+  transition: background-color 0.1s ease-in, color 0.1s ease;
   border: none;
 }
 
 /* Style lors du clic */
 button.clicked {
   background-color: black;
-  transition-duration: 0.5s;
 }
 
 /* Bouton quand l'état actif est appliqué */
@@ -301,6 +301,7 @@ h1 {
   0% {
     transform: translateX(0%);
   }
+
   100% {
     transform: translateX(-100%);
   }
@@ -864,6 +865,11 @@ footer {
   padding: 40px 10px;
   box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.1);
   background-color: #fff;
+  transition: transform 0.3s ease;
+}
+
+.carousel-vin-image:hover img {
+  transform: scale(1.05);
 }
 
 .categorie-vin {

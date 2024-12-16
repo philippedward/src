@@ -31,35 +31,35 @@ dots.forEach((dot) => {
   });
 });
 
+// Sélection de tous les boutons avec la classe "bouton"
+const boutons = document.querySelectorAll(".bouton");
 
-// Sélection du bouton en utilisant la classe correcte
-const button = document.querySelector('button');
+// Parcourir chaque bouton pour lui attacher un événement
+boutons.forEach((bouton) => {
+  bouton.addEventListener("click", () => {
+    // Ajouter la classe 'clicked' au bouton cliqué
+    bouton.classList.add("clicked");
 
-// Ajout d'un événement de clic sur le bouton
-button.addEventListener('click', () => {
-  // Ajout de la classe 'clicked' lorsque le bouton est cliqué
-  button.classList.add('clicked');
-
-  // Retirer la classe 'clicked' après une durée pour laisser l'animation se produire
-  setTimeout(() => {
-    button.classList.remove('clicked');
-  }, 700); // La durée ici doit être la même que celle de la transition CSS
+    // Retirer la classe 'clicked' après 700 ms pour laisser l'animation se produire
+    setTimeout(() => {
+      bouton.classList.remove("clicked");
+    }, 700); // La durée ici doit correspondre à celle des transitions CSS
+  });
 });
-
-
 
 //langue
 // Sélection des éléments
 const menuToggle = document.getElementById("menu-toggle");
 const hiddenLinks = document.querySelector(".hidden-links");
-const icon = document.querySelector("#hamburger-logo i");
+const icon = document.querySelector(".awesome-arrow");
 
 // Gestion du clic
 menuToggle.addEventListener("click", () => {
   // Basculer la classe 'expanded' pour les liens cachés
   hiddenLinks.classList.toggle("expanded");
-  
+
   // Basculer la classe 'rotated' pour l'icône
   icon.classList.toggle("rotated");
 });
 
+//carousel-vin
