@@ -37,6 +37,10 @@ h4 {
   color: #000;
 }
 
+p {
+  color: #000;
+}
+
 .awesome {
   color: #000;
   font-family: "Font Awesome 6 Free";
@@ -62,7 +66,6 @@ a {
 }
 
 .maps {
-  color: #000;
   font-family: Times;
   font-size: 16px;
   font-weight: 400;
@@ -131,7 +134,6 @@ header {
   gap: 27px;
 }
 
-/* Structure de la barre de menu */
 .menu {
   display: flex;
   flex-direction: column;
@@ -145,7 +147,7 @@ header {
 
 .awesome-arrow.clicked {
   transform: rotate(180deg);
-  transition: transform 0.5s ease; /* Transition pour la rotation */
+  transition: transform 0.5s ease;
 }
 
 nav {
@@ -156,7 +158,6 @@ nav {
 
 nav a,
 .menu-header i {
-  color: #000;
   text-decoration: none;
   display: block;
   text-align: center;
@@ -168,20 +169,18 @@ nav a,
   padding: 0px 8px;
 }
 
-/* Cacher les autres liens au départ */
 .hidden-links {
   overflow: hidden;
   max-height: 0;
   transition: max-height 0.5s ease-in-out;
 }
 
-/* Liens supplémentaires visibles lorsqu'activé */
 .hidden-links.expanded {
-  max-height: 300px; /* Ajuster pour inclure tous les liens */
+  max-height: 300px;
 }
 
 .rotated {
-  transform: rotate(180deg); /* Rotation de l'icône */
+  transform: rotate(180deg);
 }
 
 //*** accueil ***//
@@ -252,12 +251,14 @@ button {
   border: none;
 }
 
-/* Style lors du clic */
-button.clicked {
-  background-color: black;
+.bouton p {
+  color: #fff;
 }
 
-/* Bouton quand l'état actif est appliqué */
+button.clicked {
+  background-color: #000;
+}
+
 button.clicked {
   background-color: #000;
   color: #fff;
@@ -287,13 +288,11 @@ button.clicked {
 }
 
 h1 {
-  color: #000;
   text-align: center;
   font-family: Times;
   font-size: 66px;
   font-style: italic;
   font-weight: 400;
-  margin: 0;
   padding: 0 20px;
 }
 
@@ -341,7 +340,6 @@ h1 {
 }
 
 .text-info {
-  color: #000;
   text-align: center;
   font-family: "Helvetica Neue";
   font-size: 19px;
@@ -350,7 +348,6 @@ h1 {
 }
 
 .valable {
-  color: #000;
   text-align: center;
   font-family: Times;
   font-size: 21px;
@@ -368,13 +365,11 @@ h1 {
   position: relative;
 }
 
-.pourcent p {
+.pourcent {
   font-family: Times;
+  font-style: italic;
   font-size: 40px;
   font-weight: 700;
-}
-
-.pourcent {
   color: #e93939;
   display: flex;
   position: absolute;
@@ -535,7 +530,6 @@ h3 {
   transition: transform 0.3s ease;
 }
 
-/* Effet de survol */
 .carousel-image:hover .flou {
   filter: blur(2px);
 }
@@ -547,7 +541,6 @@ h3 {
 //*** footer ***//
 
 h4 {
-  color: #000;
   font-family: "Helvetica Neue";
   font-size: 12px;
   font-weight: 400;
@@ -556,7 +549,6 @@ h4 {
 }
 
 footer p {
-  color: #000;
   font-family: Times;
   font-size: 20px;
   font-weight: 400;
@@ -587,12 +579,9 @@ footer {
 }
 
 .footer-fin p {
-  color: #000;
   font-family: "Helvetica Neue";
   font-size: 12px;
-  font-style: normal;
   font-weight: 300;
-  line-height: normal;
   text-transform: uppercase;
 }
 
@@ -627,14 +616,12 @@ footer {
 .vin-date,
 .vin-cl,
 .vin-prix {
-  color: #000;
   font-family: Times;
   font-size: 32px;
   font-weight: 700;
 }
 
 .vin-long-text p {
-  color: #000;
   font-family: "Helvetica Neue";
   font-size: 20px;
   font-weight: 200;
@@ -706,14 +693,12 @@ footer {
 
 .vin-info-top p,
 .vin-info-prix {
-  color: #000;
   font-family: Times;
   font-size: 32px;
   font-weight: 700;
 }
 
 .vin-info-text {
-  color: #000;
   font-family: "Helvetica Neue";
   font-size: 20px;
   font-weight: 200;
@@ -803,7 +788,6 @@ footer {
   font-size: 16px;
 }
 .vin-h2 {
-  color: #000;
   font-family: Times;
   font-size: 28px;
   font-weight: 400;
@@ -812,14 +796,12 @@ footer {
 }
 
 .right {
-  color: #000;
   font-family: "Helvetica Neue";
   font-size: 20px;
   font-weight: 300;
 }
 
 .left {
-  color: #000;
   text-align: right;
   font-family: "Helvetica Neue";
   font-size: 20px;
@@ -880,7 +862,6 @@ footer {
 }
 
 .categorie-vin p {
-  color: #000;
   text-align: center;
   font-family: "Helvetica Neue";
   font-size: 18px;
