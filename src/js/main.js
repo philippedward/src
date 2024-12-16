@@ -31,8 +31,16 @@ dots.forEach((dot) => {
   });
 });
 
-// Démarrer le défilement automatique
-setInterval(autoSlide, 3000); // Change d'image toutes les 3 secondes
+// Sélection du bouton
+const button = document.getElementById("colorButton");
 
-// Initialisation : afficher la première image
-changeSlide(currentIndex);
+// Ajout d'un événement click
+button.addEventListener("click", () => {
+  // Ajouter la classe "clicked" pour changer la couleur
+  button.classList.add("clicked");
+
+  // Revenir à la couleur rouge après la transition
+  setTimeout(() => {
+    button.classList.remove("clicked");
+  }, 500); // Durée de la transition (0.5s)
+});
