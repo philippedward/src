@@ -125,19 +125,63 @@ header {
   gap: 29px;
 }
 
-.langue {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  align-self: stretch;
-}
-
 .header-icone {
   display: flex;
   align-items: center;
   gap: 27px;
 }
+
+/* Structure de la barre de menu */
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.menu-header i {
+  transform: rotate(180deg);
+  transition: transform 0.5s ease; /* Transition pour la rotation */
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+nav a, .menu-header i {
+  color: #000;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+}
+
+nav a:hover {
+  background: #f4f4f4;
+}
+
+/* Cacher les autres liens au départ */
+.hidden-links {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.7s ease-in-out;
+}
+
+/* Liens supplémentaires visibles lorsqu'activé */
+.hidden-links.expanded {
+  max-height: 300px; /* Ajuster pour inclure tous les liens */
+}
+
+.rotated {
+  transform: rotate(180deg); /* Rotation de l'icône */
+}
+
 
 //*** accueil ***//
 
@@ -191,7 +235,7 @@ header {
   gap: 22px;
 }
 
-.bouton {
+button {
   color: #fff;
   font-family: "Helvetica Neue";
   font-size: 16px;
@@ -203,6 +247,20 @@ header {
   gap: 10px;
   background: #e93939;
   cursor: pointer;
+  transition: background-color 0.7s ease, color 0.7s ease; 
+  border: none;
+}
+
+/* Style lors du clic */
+button.clicked {
+  background-color: black;
+  transition-duration: 0.5s;
+}
+
+/* Bouton quand l'état actif est appliqué */
+button.clicked {
+  background-color: #000;
+  color: #fff;
 }
 
 .bouton-act {
@@ -211,12 +269,6 @@ header {
 
 .bouton-act i {
   transform: rotate(-43.754deg);
-}
-
-/* Style lors du clic */
-.bouton.clicked {
-  background-color: black;
-  transition-duration: 0.5s;
 }
 
 //*** scroll text ***//
@@ -471,6 +523,7 @@ h3 {
 .carousel-image {
   position: relative;
   display: inline-block;
+  box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.25);
 }
 
 .categorie {
@@ -647,7 +700,6 @@ footer {
   gap: 47px;
   align-self: stretch;
 }
-
 
 // *** details *** //
 
