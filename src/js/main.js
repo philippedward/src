@@ -47,6 +47,12 @@ boutons.forEach((bouton) => {
   });
 });
 
+// Démarrer le défilement automatique
+setInterval(autoSlide, 3000); // Change d'image toutes les 3 secondes
+
+// Initialisation : afficher la première image
+changeSlide(currentIndex);
+
 //langue
 // Sélection des éléments
 const menuToggle = document.getElementById("menu-toggle");
@@ -60,4 +66,14 @@ menuToggle.addEventListener("click", () => {
 
   // Basculer la classe 'rotated' pour l'icône
   icon.classList.toggle("rotated");
+});
+
+window.addEventListener("scroll", () => {
+  const header = document.querySelector("header");
+
+  if (window.scrollY > 50) {
+    header.classList.add("scrolled");
+  } else {
+    header.classList.remove("scrolled");
+  }
 });

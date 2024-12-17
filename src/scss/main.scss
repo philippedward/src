@@ -57,6 +57,7 @@ body {
   z-index: 1;
   background-image: url("/src/img/fondu.png");
   cursor: default;
+  padding-top: 130px;
 }
 
 //*** header ***//
@@ -102,6 +103,17 @@ header {
   display: flex;
   justify-content: space-between;
   padding: 27px 20px;
+  position: fixed;
+  background-color: #fff;
+  width: 100%;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  transition: padding 0.3s ease;
+}
+
+header.scrolled {
+  padding: 18px 20px;
 }
 
 .header-langue {
@@ -285,7 +297,14 @@ button.clicked {
 
 .scroll-text-content {
   display: flex;
+}
+
+.scroll-text-content h1 {
   animation: scroll 10s linear infinite;
+}
+
+.long {
+  animation: scroll 12s linear infinite;
 }
 
 h1 {
@@ -303,7 +322,7 @@ h1 {
   }
 
   100% {
-    transform: translateX(-1320px); //290+40=340x4
+    transform: translateX(-100%);
   }
 }
 
@@ -460,13 +479,13 @@ h1 {
   opacity: 0.4;
 }
 
-.vedette:hover::before {
+.vedette-center:hover .vedette::before {
   width: 480px;
   height: 480px;
   opacity: 0.8;
 }
 
-.vedette:hover::after {
+.vedette-center:hover .vedette::after {
   width: 720px;
   height: 720px;
   opacity: 0.2;
@@ -482,7 +501,7 @@ h1 {
   z-index: 2;
 }
 
-.vedette:hover ~ .overlay {
+.vedette-center:hover .overlay {
   opacity: 1;
 }
 
@@ -520,7 +539,6 @@ h3 {
 
 .carousel-image {
   position: relative;
-  display: inline-block;
   box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.25);
 }
 
@@ -874,4 +892,8 @@ footer {
   font-family: "Helvetica Neue";
   font-size: 18px;
   font-weight: 300;
+}
+
+.content-carousel {
+  margin-right: calc((100vw - 1320px) / 2 * -1);
 }
