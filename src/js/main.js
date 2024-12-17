@@ -61,5 +61,3 @@ menuToggle.addEventListener("click", () => {
   // Basculer la classe 'rotated' pour l'icône
   icon.classList.toggle("rotated");
 });
-
-//carousel-vin

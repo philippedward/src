@@ -298,11 +298,11 @@ h1 {
 
 @keyframes scroll {
   0% {
-    transform: translateX(0%);
+    transform: translateX(0);
   }
 
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-1320px); //290+40=340x4
   }
 }
 
@@ -514,12 +514,17 @@ h3 {
 .row.nowrap {
   display: flex;
   flex-wrap: nowrap;
+  overflow: auto;
 }
 
 .carousel-image {
   position: relative;
   display: inline-block;
   box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+.carousel-image img {
+  width: 100%;
 }
 
 .categorie {
@@ -787,7 +792,9 @@ footer {
   color: #fff;
   font-size: 16px;
 }
+
 .vin-h2 {
+  color: #000;
   font-family: Times;
   font-size: 28px;
   font-weight: 400;
